@@ -1,0 +1,20 @@
+{
+    "name": "thaile/media",
+    "description": "The Laravel Framework Plugin.",
+    "keywords": ["media", "laravel"],
+    "authors": [
+        {
+            "name": "thaile",
+            "email": "thaile.dev01@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ThaiLe\\Media\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6.4",
+        "intervention/image": "2.*"
+    }
+}
