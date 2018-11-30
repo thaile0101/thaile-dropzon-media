@@ -21,11 +21,11 @@ class MediaServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
 
-        $this->publishes([
-            __DIR__.'/../../config/media.php' => config_path('media.php'),
-            __DIR__.'/../../public' => public_path('js'),
-            __DIR__.'/../../database/migrations' => database_path('migrations')
-        ], 'media');
+//        $this->publishes([
+//            __DIR__.'/../../config/media.php' => config_path('media.php'),
+//            __DIR__.'/../../public' => public_path('js'),
+//            __DIR__.'/../../database/migrations' => database_path('migrations')
+//        ], 'media');
     }
 
     /**

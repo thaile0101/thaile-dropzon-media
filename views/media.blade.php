@@ -11,18 +11,19 @@
 <body>
 
 <div class="container">
-    <h1>Media By ThaiLe</h1>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Show Media
-    </button>
+    <div class="pull-left">
+        <h1>Media By ThaiLe</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Show Media
+        </button>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" style="max-width: 80%" role="document">
             <div class="modal-content" >
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <div class="row" style="width: 90%">
+                    <div class="row" style="width: 90%; margin: 0 3em 0 5em">
                         <div class="col-md-12">
                             <h2 class="page-heading">Upload your Images <span id="counter"></span></h2>
                             <form method="post" action="{{ route('image.store') }}"
@@ -92,18 +93,8 @@
                     </button>
                 </div>
                 <div class="modal-body" style="overflow-x: auto;">
-                    <div class="table-responsive-sm">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">Image</th>
-                                <th scope="col">Original Filename</th>
-                                <th scope="col">Remove</th>
-                            </tr>
-                            </thead>
-                            <tbody id="show-image">
-                            </tbody>
-                        </table>
+                    <div class="card-columns" id="img-show">
+
                     </div>
                 </div>
                 <div class="modal-footer">

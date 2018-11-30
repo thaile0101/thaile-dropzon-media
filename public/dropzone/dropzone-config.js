@@ -29,7 +29,7 @@ $(document).ready(function() {
  */
 function showImage()
 {
-    $('#show-image').empty();
+    $('#img-show').empty();
     $.ajax({
         type: "GET",
         url: '/image/index',
@@ -39,16 +39,17 @@ function showImage()
 
                 $.each( data.data, function( key, value ) {
                     html = html +
-                        '<tr>' +
-                        '    <td><img src="/images/' + value.resized_name + '"></td>' +
-                        '    <td>' + value.original_name + '</td>' +
-                        '    <td>' +
-                        '<form action="" method="post">' +
-                        '<button type="button" onclick="return deleteImage(this);" data-img="' + value.id +'" class="btn btn-warning">Remove</button></td>' +
-                        '</form>' +
-                        '</tr>'
+                        '<div class="card">' +
+                        '    <img class="card-img-top" src="/images/' + value.resized_name + '" alt="' + value.original_name + '">' +
+                        '    <div class="card-body">' +
+                        '        <h5 class="card-title">' + value.original_name + '</h5>' +
+                        '        <form action="" method="post">' +
+                        '             <button type="button" onclick="return deleteImage(this);" data-img="' + value.id +'" class="btn btn-warning">Remove</button></td>' +
+                        '       </form>'+
+                        '    </div>' +
+                        '</div>';
                 });
-                $('#show-image').append(html);
+                $('#img-show').append(html);
             }
         }
     });
